@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's Yours</title>
+
+    <!-- 구글 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/zen5nkm.css">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="section script-your">
+        <div class="script-container">
+            <p class="script-text">Tell me about your Golden Age</p>
+            <input type="text" id="userInput" placeholder="What's Yours?...">
+            <div id="floatingTexts"></div> <!-- 둥둥 떠다니는 텍스트를 담을 컨테이너 -->
+        </div>
+    </section>
+
+   
+    <!-- "Go Back" 버튼을 위한 컨테이너 추가 -->
+<div class="button-container">
+    <button id="startButton" class="center-button">Go Back</button>
+</div>
+
+<script src="script2.js"></script>
+     <script>
+         document.getElementById("startButton").addEventListener("click", () => {
+             window.location.href = "let.html"; // 영화 스크립트 페이지로 이동
+         });
+     </script>
+
+</body>
+</html>

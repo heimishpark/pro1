@@ -1,0 +1,434 @@
+body {
+    margin: 5;
+    background-color: rgb(16, 16, 16);
+    font-family: "Share Tech Mono", serif;
+    color: rgb(255, 251, 232);
+    scroll-behavior: smooth;
+}
+
+/* 각 섹션 스타일 */
+.section {
+    height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 첫 번째 섹션 (스크립트) */
+.script-container {
+    font-size: 1.5rem;
+    max-width: 80ch; /* 텍스트 너비 제한 (너무 넓어지지 않게) */
+    text-align: center;
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: flex-start; /* 세로 중앙 정렬 */
+    height: 100vh;
+    padding: 60px 20px;
+    margin: 0 auto; /* 중앙 정렬 */
+}
+
+.highlight {
+    text-decoration: underline;
+    text-decoration-thickness: 1px; /* 밑줄 두께 */
+    text-underline-offset: 7px; /* 밑줄과 텍스트 간격 */
+ }
+
+
+
+
+/* 두 번째 섹션 (네온사인) */
+.neon-section {
+    background-color: rgb(16, 16, 16);
+    position: relative;
+    height: 100vh;
+}
+
+/* 네온사인 배치 */
+.neon-signs {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* 개별 네온사인 스타일 */
+.sign1, .sign2, .sign3, .sign4, .sign5, .sign6, .sign7, .sign8, .sign9, .sign10{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* 페이드아웃 속도 단축 (기존 2.5s → 1s) */
+}
+
+/* 원하는 위치 설정 */
+.sign1 {
+    top: 35%;
+    left: 20%;
+    font-size: 3rem;
+    color: bisque;
+    font-family: "Potta One", serif;
+    text-shadow: 0 0 4px #ffd8d8, 0 0 10px #ff5a5a, 0 0 20px #b51919;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+}
+
+.sign2 {
+    top: 45%;
+    left: 33%;
+    font-size: 3.8rem;
+    color: aqua;
+    font-family: "Rampart One", serif;
+    text-shadow: 0 0 4px #d8dfff, 0 0 10px #5a6dff, 0 0 20px #a0b519;
+}
+
+.sign3 {
+    top: 25%;
+    right: 18%;
+    font-size: 5rem;
+    color: bisque;
+    font-family: "Potta One", serif;
+    text-shadow: 0 0 4px #ffd8d8, 0 0 10px #ff5a5a, 0 0 20px #b51919;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+}
+
+.sign4 {
+    top: 53%;
+    left: 15%;
+    font-size: 1.8rem;
+    color: aqua;
+    font-family: "Rampart One", serif;
+    text-shadow: 0 0 4px #d8dfff, 0 0 10px #5a6dff, 0 0 20px #a0b519;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+}
+
+.sign5 {
+    top: 45%;
+    right: 8%;
+    font-size: 4rem;
+    color: rgb(253, 211, 159);
+    font-family: "Potta One", serif;
+    text-shadow: 0 0 4px #ffd8d8, 0 0 10px #56cf96, 0 0 20px #b51919;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+}
+.sign6 {
+    top: 65%;
+    left: 8%;
+    font-size: 4rem;
+    color: rgb(255, 136, 217);
+    font-family: "Potta One", serif;
+    text-shadow: 0 0 7px #ffd8d8, 0 0 10px #56cf96, 0 0 20px #b51919;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    white-space: nowrap;
+    display: inline-block;
+}
+.sign7 {
+    top: 65%;
+    right:15%;  /* 더 화면 안쪽으로 조정 */
+    font-size: 4rem;
+    color: rgb(174, 136, 255);
+    font-family: "Rampart One", serif;
+    text-shadow: 0 0 7px #ffd8d8, 0 0 10px #56cf96, 0 0 20px #b51919;
+
+}
+.sign8 {
+    top: 65%;
+    right:3%;  
+    font-size: 3.3rem;
+    color: rgb(136, 255, 195);
+    font-family: "Rampart One", serif;
+    text-shadow: 0 0 7px #ffd8d8, 0 0 10px #56cf96, 0 0 20px #b51919;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    white-space: nowrap;
+
+}
+.sign9 {
+    top: 40% !important;
+    left:3%;  
+    font-size: 3.3rem;
+    color: rgb(136, 255, 195);
+    font-family: "Rampart One", serif;
+    text-shadow: 0 0 7px #ffd8d8, 0 0 10px #56cf96, 0 0 20px #b51919;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    white-space: nowrap;
+
+}
+.sign10 {
+    top: 10%;
+    right:20%;  
+    font-size: 2.6rem;
+    color: rgb(191, 130, 196);
+    font-family: "Rampart One", serif;
+    text-shadow: 0 0 7px #ffd8d8, 0 0 10px #56cf96, 0 0 20px #b51919;
+    white-space: nowrap;
+
+
+}
+
+
+.sign1.show, .sign2.show, .sign3.show, .sign4.show, .sign5.show, .sign6.show, .sign7.show, .sign8.show , .sign9.show, .sign10.show{
+    opacity: 2;
+    transition: opacity 3.7s ease-in-out;
+}
+
+/* 섹션을 벗어나면 페이드아웃 */
+.sign1.hide, .sign2.hide, .sign3.hide, .sign4.hide, .sign5.hide, .sign6.hide, .sign7.hide, .sign8.hide, .sign9.hide, .sign.hide {
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+}
+
+/* 🌟 섹션 3 (Golden Age) */
+.golden-age-section {
+    position: relative;
+    background-color: rgb(16, 16, 16);
+    color: rgb(255, 251, 232);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 3s ease-in-out, transform 3s ease-in-out;
+}
+
+/* 텍스트 컨테이너 */
+.golden-age-content {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 3s ease-in-out, transform 3s ease-in-out;
+}
+
+/* ✨ 스크롤 시 페이드인 */
+.golden-age-section.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 3s ease-in-out, transform 3s ease-in-out;
+}
+
+
+/* 🔥 내부 텍스트 페이드아웃 */
+.golden-age-content.fade-out {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.golden-age-section.show .golden-age-content {
+    opacity: 1;
+    transition: opacity 3s ease-in-out;
+}
+
+.golden-age-section.hide .golden-age-content {
+    opacity: 0;
+    transition: opacity 1s ease-out; 
+}
+
+
+
+/* 🌟 섹션 2와 3 사이의 문구 스타일 */
+.transition-text-section {
+    position: relative;
+    height: 50vh; /* 높이를 조정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(16, 16, 16);
+}
+
+/* 🌟 페이드인/페이드아웃 적용 */
+.transition-text-container {
+    text-align: center;
+    font-size: 1.7rem;
+    color: rgb(253, 211, 159);
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+
+/* ✨ 텍스트 페이드인 */
+.transition-text.show {
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+}
+
+/* ✨ 텍스트 페이드아웃 */
+.transition-text.hide {
+    opacity: 0;
+    transition: opacity 1s ease-out; 
+}
+
+.center-button {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    font-size: 2rem;
+    border: none;
+    padding: 20px 30px;
+    cursor: pointer;
+    color: white;
+}
+
+
+/* 영화 스크립트 섹션 페이드아웃 */
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+/* "My Golden Age" 버튼 */
+.golden-age-button {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent; 
+    font-size: 1.2rem;
+    border: none;
+    padding: 20px 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    color: white;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: none;
+
+}
+
+/* 버튼 나타날 때 */
+.golden-age-button.show {
+    opacity: 1;
+    display: block;
+}
+
+/* 버튼 숨김 */
+.hidden {
+    display: none;
+}
+.next-page-container {
+    text-align: center;
+    margin-top: 20px; 
+    padding-bottom: 50px; 
+}
+
+
+.next-page-button {
+    font-size: 1.8rem;
+    color: rgb(255, 252, 236); 
+    text-decoration: none; 
+    display: inline-block;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+
+.next-page-button:hover {
+    color: rgb(255, 255, 255); /* 마우스 올리면 흰색 */
+    text-shadow: 0 0 5px #ffeb3b, 0 0 10px #ffc107, 0 0 20px #ff9800;
+}
+
+.script-your {
+    height:80vh;
+    font-size: 1.2rem;
+    max-width: 70vh; /* 텍스트 너비 제한 (너무 넓어지지 않게) */
+    text-align: center;
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: flex-start; /* 세로 중앙 정렬 */
+    height: 100vh;
+    padding-top:80px;
+    margin: 0 auto; /* 중앙 정렬 */
+}
+#userInput {
+    width: 40%; /* 입력창 크기 */
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid rgb(255, 255, 255);
+    background: transparent;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px; /* 텍스트 아래 여백 */
+    text-align: center;
+    outline: none;
+}
+#userInput:focus {
+    border-color: rgb(191, 130, 196);
+    box-shadow: 0 0 10px rgb(191, 130, 196);
+}
+
+#floatingTexts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none; /* ✅ 입력창 방해 안 하게 설정 */
+}
+
+.floating-text {
+    position: absolute;
+    font-size: 1.5rem;
+    font-family: "Rampart One", serif;
+    color: rgb(191, 130, 196);
+    text-shadow: 0 0 7px #ffd8d8, 0 0 10px #56cf96, 0 0 20px #b51919;
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: auto; /* ✅ 떠다니는 텍스트는 클릭 가능하도록 */
+    animation: floatText 12s linear infinite;
+}
+/* 🌟 떠다니는 애니메이션 조정 */
+@keyframes floatText {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-200px) translateX(50px);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-400px) translateX(-50px);
+        opacity: 0;
+    }
+}
+
+/* 🌟 입력창과 텍스트를 포함하는 컨테이너 */
+.script-container {
+    display: flex;
+    flex-direction: column; /* 요소들을 세로 정렬 */
+    align-items: center; /* 가운데 정렬 */
+    text-align: center;
+}
+
+.button-container {
+    position: fixed; 
+    bottom: 30px; /* 하단에서 30px 위로 */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+}
+
+/* 🌟 "Go Back" 버튼 스타일 */
+.center-button {
+    font-size: 1.15rem;
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+
+}
+
+/* 🌟 마우스 호버 효과 */
+.center-button:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 5px #ffeb3b, 0 0 10px #ffc107, 0 0 20px #ff9800;
+}
