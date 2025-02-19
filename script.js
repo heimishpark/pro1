@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 setTimeout(() => {
                     scriptSection.style.display = "none"; // 완전히 숨김
                     goldenAgeButton.classList.remove("hidden"); // "My Golden Age" 버튼 표시
-                }, 2000); // 페이드아웃 지속 시간 2초
+                }, 1000); // 페이드아웃 지속 시간 2초
             }, 33000);
         }
         isPlaying = true;
